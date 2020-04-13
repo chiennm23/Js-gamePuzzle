@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game Puzzle</title>
+    <style>
+        #imageOne {
+            width: 150px;
+            height: 150px;
+        }
+        #imageTwo {
+            width: 150px;
+            height: 150px;
+        }
+        #imageThree {
+            width: 150px;
+            height: 150px;
+        }
+    </style>
+</head>
+<body>
+<img id="imageOne" onclick="image1();" src="https://i.pinimg.com/736x/7c/1a/e2/7c1ae2112b91008df6440f5a6ecece6a.jpg">
+<br>
+<img id="imageTwo" onclick="image2();" src="https://i.pinimg.com/280x280_RS/99/0e/a2/990ea2df95d7a03b897a4a7b4d109cb4.jpg">
+<br>
+<img id="imageThree" onclick="image3();" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT1QzelHhTY2gK_esrISqJw9EKy2Byx59RMtwnnuqJGyBEkXgnB&usqp=CAU">
+<br>
+<input type="button" onclick="check();" value="CheckWin">
+<script>
+    img1 = "https://i.pinimg.com/736x/7c/1a/e2/7c1ae2112b91008df6440f5a6ecece6a.jpg";
+    img2 = "https://i.pinimg.com/280x280_RS/99/0e/a2/990ea2df95d7a03b897a4a7b4d109cb4.jpg";
+    img3 = "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT1QzelHhTY2gK_esrISqJw9EKy2Byx59RMtwnnuqJGyBEkXgnB&usqp=CAU";
+    function image1() {
+         let idImgOne = document.getElementById("imageOne");
+        if ((idImgOne). src == img1){
+            idImgOne. src = img2;
+        } else if (idImgOne. src == img2) {
+            idImgOne. src = img3;
+        } else {
+            idImgOne. src = img1;
+        }
+    }
+    function image2() {
+        let idImgTwo = document.getElementById("imageTwo");
+        if (idImgTwo.src == img2) {
+            idImgTwo.src= img3;
+        } else if (idImgTwo.src ==img3){
+            idImgTwo.src=img1;
+        } else {
+            idImgTwo.src=img2;
+        }
+    }
+    function image3() {
+        let idImgThree = document.getElementById("imageThree");
+        if (idImgThree.src == img3){
+            idImgThree.src = img1;
+        } else if (idImgThree.src == img1) {
+            idImgThree.src = img2;
+        } else {
+            idImgThree.src = img3;
+        }
+
+    }
+    // function check() {
+    //     if {
+    //        //  alert("You are Victory");
+    //     }
+    // }
+</script>
+</body>
+</html>
